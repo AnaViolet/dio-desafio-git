@@ -1,23 +1,23 @@
 package dio.fila;
 
-public class No {
+public class No<T> {
 
-    private Object objeto;
+    private T objeto;
     private No refNo;
 
     public No() {
     }
 
-    public No(Object objeto) {
+    public No(T objeto) {
         this.refNo = null;
         this.objeto = objeto;
     }
 
-    public Object getObjeto() {
+    public T getObjeto() {
         return objeto;
     }
 
-    public void setObjeto(Object objeto) {
+    public void setObjeto(T objeto) {
         this.objeto = objeto;
     }
 

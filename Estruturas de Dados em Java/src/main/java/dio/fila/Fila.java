@@ -1,8 +1,8 @@
 package dio.fila;
 
-public class Fila {
+public class Fila<T>{
 
-    private No refNoEntradaFila;
+    private No<T> refNoEntradaFila;
 
     public Fila() {
         this.refNoEntradaFila = null;
@@ -12,24 +12,25 @@ public class Fila {
         return refNoEntradaFila == null ? true : false;
     }
 
-    public No first(){
+    public T first(){
         if(!this.isEmpty()){
             No primeiroNo = refNoEntradaFila;
             while (true){
                 if(primeiroNo.getRefNo() == null)
-                    return primeiroNo;
+                    return (T) primeiroNo.getObjeto();
                 primeiroNo = primeiroNo.getRefNo();
             }
         }
         return null;
     }
 
-    public void enqueue(No novoNo){
+    public void enqueue(T obj){
+        No novoNo = new No(obj);
         novoNo.setRefNo(refNoEntradaFila);
         this.refNoEntradaFila = novoNo;
     }
 
-    public No dequeue(){
+    public T dequeue(){
         if(!this.isEmpty()){
             No primeiroNo = refNoEntradaFila;
             No noAuxiliar = refNoEntradaFila;
@@ -43,7 +44,7 @@ public class Fila {
                     break;
                 }
             }
-            return primeiroNo;
+            return (T) primeiroNo.getObjeto();
         }
         return null;
     }
@@ -64,7 +65,7 @@ public class Fila {
                 }
             }
         } else{
-            strReturn = "Fila vazia!";
+            strReturn = "FILA VAZIA!";
         }
         return strReturn;
     }
