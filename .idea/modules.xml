@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Estruturas de Dados em Java/Pilha.iml" filepath="$PROJECT_DIR$/Estruturas de Dados em Java/Pilha.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/dio-desafio-git.iml" filepath="$PROJECT_DIR$/.idea/dio-desafio-git.iml" />
+    </modules>
+  </component>
+</project>
